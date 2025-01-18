@@ -6,9 +6,10 @@ frontend:
         - yarn install
     build:
       commands:
+        - env | grep -e NODE_ENV -e NEXT_ >> .env.production
         - yarn build
-        - mkdir -p .next/standalone/public
-        - cp -r public/* .next/standalone/public/
+        - cp -r .next/static .next/standalone/.next/
+        - cp -r public .next/standalone/
   artifacts:
     baseDirectory: .next/standalone
     files:

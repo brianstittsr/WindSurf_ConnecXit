@@ -24,53 +24,11 @@ const nextConfig = {
       },
     ];
   },
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    // Add path aliases
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@': path.join(__dirname, './app'),
-    };
-
-    // Configure module resolution
-    config.resolve = {
-      ...config.resolve,
-      modules: ['node_modules', path.resolve(__dirname)],
-      extensions: ['.js', '.jsx', '.json'],
-      fallback: {
-        ...config.resolve.fallback,
-        fs: false,
-        path: false,
-      },
-    };
-
-    // Add source map support for better debugging
-    if (dev) {
-      config.devtool = 'eval-source-map';
-    }
-
-    // Optimize production build
-    if (!dev) {
-      config.optimization = {
-        minimize: true,
-        minimizer: [
-          (compiler) => {
-            const TerserPlugin = require('terser-webpack-plugin');
-            new TerserPlugin({
-              terserOptions: {
-                compress: {
-                  drop_console: true,
-                },
-              },
-            });
-          },
-        ],
-      };
-    }
-
-    return config;
-  },
-  // Add output configuration for static exports
   output: 'standalone',
+  distDir: '.next',
+  generateBuildId: async () => {
+    return 'build-' + Date.now();
+  },
 };
 
 module.exports = nextConfig;
