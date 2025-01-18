@@ -1,26 +1,12 @@
 /** @type {import('next').NextConfig} */
-const path = require('path');
-
 const nextConfig = {
   reactStrictMode: true,
-  experimental: {
-    typedRoutes: true,
-  },
+  output: 'export',
   images: {
     unoptimized: true,
   },
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/landing',
-        permanent: true,
-      },
-    ];
-  },
-  output: 'export',
-  distDir: 'dist',
   trailingSlash: true,
+  distDir: 'dist'
 };
 
 module.exports = nextConfig;

@@ -13,15 +13,23 @@
   },
   "dependencies": {
     "@radix-ui/react-select": "^2.0.0",
+    "@radix-ui/react-switch": "^1.1.1",
+    "@radix-ui/themes": "^3.1.0",
+    "@react-oauth/google": "^0.12.1",
+    "@tailwindcss/forms": "^0.5.7",
     "axios": "^1.6.5",
     "next": "14.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-select": "^5.8.0"
+    "react-select": "^5.8.0",
+    "react-datepicker": "^7.6.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "14.0.4",
     "postcss": "^8.4.33",
+    "prettier": "^3.2.4",
     "tailwindcss": "^3.4.1"
   }
 }
