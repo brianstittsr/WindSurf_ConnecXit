@@ -6,15 +6,12 @@ frontend:
         - yarn install
     build:
       commands:
-        - env | grep -e NODE_ENV -e NEXT_ >> .env.production
         - yarn build
-        - cp -r .next/static .next/standalone/.next/
-        - cp -r public .next/standalone/
   artifacts:
-    baseDirectory: .next/standalone
+    baseDirectory: dist
     files:
       - '**/*'
   cache:
     paths:
       - node_modules/**/*
-      - .next/cache/**/*
+      - dist/cache/**/*
