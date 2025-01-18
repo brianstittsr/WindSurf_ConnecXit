@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+}
+
+* {
+  box-sizing: border-box;
+  line-height: normal;
+  font-family: inherit;
+  margin: unset;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+ul {
+  margin: 0;
+  margin-inline: unset !important;
+  padding: 0;
+  list-style: none;
+}
+
+input {
+  background-color: transparent;
+  width: 100%;
+  color: black !important;
+  caret-color: black !important;
+}
+
+input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: #E5E7EB !important;
+  background-color: white !important;
+  color: black !important;
+  ring-width: 0 !important;
+  -webkit-appearance: none !important;
+}
+
+/* Remove focus ring for all elements */
+*:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  ring-width: 0 !important;
+}
+
+/* Remove focus visible outline */
+*:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  ring-width: 0 !important;
+}
+
+/* Override selection color */
+*::selection {
+  background-color: white !important;
+  color: black !important;
+}
+
+*::-moz-selection {
+  background-color: white !important;
+  color: black !important;
+}
+
+/* Override autofill styles */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: black !important;
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+.alice-carousel__dots-item {
+  cursor: pointer;
+}
+
+/* Radix Select Styles */
+[data-radix-select-content] {
+  background-color: white !important;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+[data-radix-select-viewport] {
+  background-color: white !important;
+  padding: 4px;
+}
+
+[data-radix-select-item] {
+  background-color: white !important;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+[data-radix-select-item]:hover,
+[data-radix-select-item][data-highlighted] {
+  background-color: #fff7ed !important;
+}
+
+/* Radix UI specific reset styles */
+.radix-switch-wrapper {
+  display: inline-flex;
+  align-items: center;
+}
+
+.radix-switch-root {
+  all: unset;
+  box-sizing: border-box;
+}
+
+.radix-switch-thumb {
+  display: block;
+  box-sizing: border-box;
+}

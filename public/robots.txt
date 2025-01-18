@@ -1,0 +1,10 @@
+# https://www.robotstxt.org/robotstxt.html
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://main.d236ug0kvw5bdv.amplifyapp.com/sitemap.xml
+
+# Disallow API routes
+Disallow: /api/
